@@ -4,8 +4,8 @@ public:
     int res=0;
     unordered_map<int,int>Map;
     for (int a: nums) {
-       res += Map[a];
-        Map[a]++;
+       res += Map[a]++;
+       
     }
       return res;
 }
