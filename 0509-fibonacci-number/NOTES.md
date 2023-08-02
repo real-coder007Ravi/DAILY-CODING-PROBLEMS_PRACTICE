@@ -1,1 +1,27 @@
+//DRY RUN BEFORE WRITING CODE
+// BRUTE FORCE
+CONSIDER N=5
+WE KNOW N=0,FIB(0)=0,FIB(1)=1,
+FIB(2)=FIB(0)+FIB(1)
+Here first two numbers of fibonacci are already known to us which give the next number as the sum of the previous two numbes.
+Using recursion
+//Base Case- where function will start calling itself so as to avoid memory overflow
+n==0||n==1 return n
+//Recursive Call
+fib(n-1),fib(n-2)
+//Small Calculation
+return fib(n-1)+fib(n-2)
+TIME - 0(2^N)
+SPACE-0(N)
 ​
+//OPTIMISED APPROACH-2
+USING MEMORIZATION FOR STORING ALREADY OCCURED VALUES AND USING THEM AS IT IS NEXT TIME AND IF NOT PRESENT THEN CALCULATING
+ONY ADD CHECK AND IF NOT PRESENT THEN CALCUALTE AND SAVE FOR FUTURE USE
+CREATE ONE SEPARATE FUNCTION
+TIME-O(N)
+SPACE-O(N)
+//OPTIMISED APPROACH-3
+USE ITERATIVE APPROACH USING DP TO MAKE IT MORE BETTER BY ITERATIVE FROM START TILL END
+CREATE A NEW DP ARRAY AND START FILLING IT FROM START TILL END
+TIME -O(N)
+SPACE-O(N)
