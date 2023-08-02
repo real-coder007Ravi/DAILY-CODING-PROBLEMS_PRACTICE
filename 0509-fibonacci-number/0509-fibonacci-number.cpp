@@ -36,15 +36,24 @@ public:
  //        }
  //        return fib(n-1)+fib(n-2);
  //    }
-    int fib(int n){
-         if(n<2)return n;
-        int a=0,b=1,c=0;
-        for(int i=1;i<n;i++){
-            c=a+b;
-            a=b;
-            b=c;
-        }
-        return c;
-    }
+    // int fib(int n){
+    //      if(n<2)return n;
+    //     int a=0,b=1,c=0;
+    //     for(int i=1;i<n;i++){
+    //         c=a+b;
+    //         a=b;
+    //         b=c;
+    //     }
+    //     return c;
+    // }
+    //USE BINET'S FORMULA FOR CALCULATING FIBONACCI NUMBER THAT IS 
+        /*
+        FIB(N)=ROUND((PHI^N)/SQRT(5)) WHERE PHI=(SQRT(5)+1)/2
+        */
+      int fib(int n){
+          double phi=((sqrt(5)+1)/2);
+          return round((pow(phi,n)/sqrt(5)));
+      }
+        
    
 };
