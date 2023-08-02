@@ -12,23 +12,23 @@ public:
 //      }
 //     };
     // MEMORIZATION
-int helper(int n,int *arr){
-        if(n==0||n==1){
-            return n;
-           }
-         if(arr[n]!=-1){
-             return arr[n];
-         }
-         int ans=helper(n-1,arr)+helper(n-2,arr);
-         arr[n]=ans;
-         return ans;
-}
-int fib(int n) {
-         int *arr=new int[n+1];
-         for(int i=0;i<=n;i++){
-             arr[i]=-1;
-         }
-         return helper(n,arr);}
+// int helper(int n,int *arr){
+//         if(n==0||n==1){
+//             return n;
+//            }
+//          if(arr[n]!=-1){
+//              return arr[n];
+//          }
+//          int ans=helper(n-1,arr)+helper(n-2,arr);
+//          arr[n]=ans;
+//          return ans;
+// }
+// int fib(int n) {
+//          int *arr=new int[n+1];
+//          for(int i=0;i<=n;i++){
+//              arr[i]=-1;
+//          }
+//          return helper(n,arr);}
  //    //BRUTE FORCE
  // int fib(int n) {
  //        if(n==0||n==1){
@@ -36,4 +36,15 @@ int fib(int n) {
  //        }
  //        return fib(n-1)+fib(n-2);
  //    }
+    int fib(int n){
+         if(n<2)return n;
+        int a=0,b=1,c=0;
+        for(int i=1;i<n;i++){
+            c=a+b;
+            a=b;
+            b=c;
+        }
+        return c;
+    }
+   
 };
